@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y --fix-missing sudo \
       apt-transport-https \
       apt-utils \
       lxc \
+      libsystemd-journal0 \
       && rm -rf /var/lib/apt/lists/*
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 USER jenkins
